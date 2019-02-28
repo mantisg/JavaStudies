@@ -12,6 +12,10 @@ public class RockPaperScissorsLizardSpock
          
          int computer, player;
          Scanner keyboard = new Scanner(System.in);
+         int start = 0;
+         
+         while (start++ < 25)
+         {
          computer = (int) (Math.random() * OPTIONS) + 1;
          
          System.out.print("Enter your choice:\nR for Rock\nP for " +
@@ -92,13 +96,13 @@ public class RockPaperScissorsLizardSpock
             
             default:
             
-               System.out.println("Not rock, paper, scissors, or Spock");
+               System.out.println("Not rock, paper, scissors, lizard or Spock");
                player = 6;
          
          }
          // Determine the winner
          if (computer == player)
-            System.out.println("It's a tie");
+            System.out.println("It's a tie\n\n");
          
          else
          {
@@ -118,11 +122,13 @@ public class RockPaperScissorsLizardSpock
             
          
             if (lose)
-               System.out.println("You lose");
+               System.out.println("You lose\n\n");
                
             else
-               System.out.println("YOU WIN!");
+               System.out.println("YOU WIN!\n\n");
             
+         }
+         
          }
                            
     }
